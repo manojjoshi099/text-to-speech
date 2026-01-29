@@ -3,46 +3,54 @@
 ![VoiceFlow Banner](https://img.shields.io/badge/VoiceFlow-Text_to_Speech-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Version](https://img.shields.io/badge/Version-1.0.0-orange)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
-A sleek, modern web application that converts text to natural-sounding speech with multi-language support, including Nepali 🇳🇵. Built with pure HTML, CSS, and JavaScript.
+<div align="center">
+  
+  ![VoiceFlow Demo](https://img.shields.io/badge/Demo-Live_Site-blueviolet)
+  [![Open in GitHub](https://img.shields.io/badge/View_on_GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/manojjoshi099/VoiceFlow)
+  
+  **A sleek, modern web application that converts text to natural-sounding speech with multi-language support including Nepali 🇳🇵**
+  
+  [🚀 Live Demo](#live-demo) • [📖 Documentation](#documentation) • [🤝 Contributing](#contributing) • [📄 License](#license)
 
-![VoiceFlow Screenshot](https://via.placeholder.com/800x450/0f172a/ffffff?text=VoiceFlow+Text-to-Speech)
+</div>
 
 ## ✨ Features
 
-### 🎨 Modern UI/UX
-- **Glassmorphism Design**: Beautiful glass-like interface with blur effects
-- **Dark/Light Themes**: Toggle between themes with persistent preference saving
-- **Responsive Layout**: Works perfectly on all device sizes
-- **Animated Elements**: Interactive buttons, sliders, and waveform animation
+### 🎨 **Modern UI/UX**
+- **Glassmorphism Design** with blur effects and gradients
+- **Dark/Light Theme Toggle** with persistent preferences
+- **Fully Responsive** layout for all device sizes
+- **Animated Elements** including waveform visualization
+- **Smooth Transitions** and interactive hover effects
 
-### 🗣️ Advanced Speech Features
-- **Multi-language Support**: English, Nepali, Hindi, and more
+### 🗣️ **Advanced Speech Features**
+- **Multi-language Support**: English, Nepali, Hindi, Spanish, French + 20+ languages
+- **Smart Voice Detection**: Auto-detects Nepali text (नमस्ते)
 - **Voice Customization**: Adjust speed (0.5x-2x), pitch (0.5-2), and volume
-- **Smart Voice Detection**: Auto-detects Nepali text and suggests optimal voices
 - **Speech Control**: Play, pause, stop, and resume functionality
+- **Organized Voice Selection**: Grouped by language with country flags
 
-### 🌐 Language Support
-- **Nepali 🇳🇵**: Special Unicode detection and pronunciation support
-- **English 🇺🇸**: Multiple voice options with gender indicators
-- **Hindi 🇮🇳**: Indian language support for better regional pronunciation
-- **20+ Languages**: All browser-supported languages available
+### 📊 **Real-time Features**
+- **Live Character Counter** with typing statistics
+- **Text Preview** showing first 100 characters
+- **Status Notifications** for all actions
+- **Waveform Animation** during speech
+- **Nepali Detection Badge** (नेपाली)
 
-### 📊 Real-time Features
-- **Character Counter**: Live character count with typing stats
-- **Text Preview**: Real-time preview of your input
-- **Status Updates**: Live status notifications for all actions
-- **Waveform Visualization**: Animated sound waves during speech
+### 🔧 **Technical Features**
+- **Pure Client-side**: No backend required, works offline
+- **Web Speech API**: Native browser speech synthesis
+- **Local Storage**: Remembers theme preferences
+- **Keyboard Accessible**: Full keyboard navigation support
+- **Progressive Enhancement**: Graceful degradation for older browsers
 
 ## 🚀 Quick Start
 
-### Method 1: Direct Download
-1. Download the ZIP file from GitHub
-2. Extract to any folder
-3. Open `index.html` in your browser
-
-### Method 2: Clone Repository
+### 📥 **Method 1: Direct Download**
 ```bash
+# Download the repository
 git clone https://github.com/manojjoshi099/VoiceFlow.git
 cd VoiceFlow
-# Open index.html in browser
+# Open index.html in your browser
