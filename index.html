@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoiceFlow | Text-to-Speech</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="glass-container">
+        <header>
+            <h1>Voice<span>Flow</span></h1>
+            <p>Convert your text to natural speech instantly.</p>
+        </header>
+
+        <main>
+            <div class="input-group">
+                <textarea id="text-input" placeholder="Enter your text here..."></textarea>
+            </div>
+
+            <div class="controls">
+                <div class="control-item">
+                    <label for="voice-select">Choose Voice</label>
+                    <select id="voice-select">
+                        <option value="">Loading voices...</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="speak-btn">
+                <span class="icon">🔊</span> Speak Now
+            </button>
+        </main>
+        
+        <footer>
+            <p>Built with JavaScript Web Speech API</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
