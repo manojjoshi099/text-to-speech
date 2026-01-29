@@ -46,3 +46,19 @@ A sleek, modern web application that converts text to natural-sounding speech wi
 git clone https://github.com/manojjoshi099/VoiceFlow.git
 cd VoiceFlow
 # Open index.html in browser
+
+👨‍💻 Author
+Manoj Joshi
+💼 Full Stack Developer specializing in web applications
+
+📍 Based in Kathmandu, Nepal
+
+🎓 Education: Bachelor's in Computer Science
+
+🔧 Skills: JavaScript, React, Laravel
+
+🌐 Portfolio: [Coming Soon]
+
+📧 Email: work@manojjoshi.com.np
+
+💼 LinkedIn: https://www.linkedin.com/in/manojjoshi99/
