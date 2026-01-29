@@ -53,4 +53,24 @@
 # Download the repository
 git clone https://github.com/manojjoshi099/VoiceFlow.git
 cd VoiceFlow
+<<<<<<< HEAD
 # Open index.html in your browser
+=======
+# Open index.html in browser
+
+👨‍💻 Author
+Manoj Joshi
+💼 Full Stack Developer specializing in web applications
+
+📍 Based in Kathmandu, Nepal
+
+🎓 Education: Bachelor's in Computer Science
+
+🔧 Skills: JavaScript, React, Laravel
+
+🌐 Portfolio: [Coming Soon]
+
+📧 Email: work@manojjoshi.com.np
+
+💼 LinkedIn: https://www.linkedin.com/in/manojjoshi99/
+>>>>>>> 668438e8663f06e3c0584d77a87d14a02f745550
