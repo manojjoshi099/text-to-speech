@@ -3,42 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VoiceFlow | Text-to-Speech</title>
+    <title>VoiceFlow | AI Text-to-Speech</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <div class="glass-container">
-        <header>
-            <h1>Voice<span>Flow</span></h1>
-            <p>Convert your text to natural speech instantly.</p>
-        </header>
-
-        <main>
-            <div class="input-group">
-                <textarea id="text-input" placeholder="Enter your text here..."></textarea>
-            </div>
-
-            <div class="controls">
-                <div class="control-item">
-                    <label for="voice-select">Choose Voice</label>
-                    <select id="voice-select">
-                        <option value="">Loading voices...</option>
-                    </select>
+    <!-- Background Elements -->
+    <div class="bg-pattern"></div>
+    <div class="gradient-blob blob-1"></div>
+    <div class="gradient-blob blob-2"></div>
+    
+    <div class="container">
+        <!-- Left Panel -->
+        <div class="card left-panel">
+            <div class="header">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-wave-square"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>VoiceFlow</h1>
+                        <p>AI-Powered Text-to-Speech</p>
+                    </div>
+                </div>
+                
+                <div class="theme-toggle" id="theme-toggle">
+                    <div class="toggle-knob"></div>
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
                 </div>
             </div>
-
-            <button id="speak-btn">
-                <span class="icon">🔊</span> Speak Now
-            </button>
-        </main>
+            
+            <div class="input-section">
+                <div class="section-header">
+                    <h3><i class="fas fa-keyboard"></i> Text Input</h3>
+                    <div class="char-count" id="char-count">0 characters</div>
+                </div>
+                
+                <div class="text-input-container">
+                    <textarea id="text-input" placeholder="Type or paste your text here..."></textarea>
+                    <div class="text-actions">
+                        <button class="icon-btn" id="clear-btn" title="Clear text">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                        <button class="icon-btn" id="sample-btn" title="Load sample text">
+                            <i class="fas fa-magic"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="controls-section">
+                    <div class="control-row">
+                        <div class="control-item">
+                            <label for="voice-select">
+                                <i class="fas fa-user-voice"></i> Voice
+                            </label>
+                            <div class="select-wrapper">
+                                <select id="voice-select">
+                                    <option value="">Loading voices...</option>
+                                </select>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="control-item">
+                            <label for="rate-control">
+                                <i class="fas fa-tachometer-alt"></i> Speed
+                            </label>
+                            <div class="slider-container">
+                                <input type="range" id="rate-control" min="0.5" max="2" step="0.1" value="1">
+                                <div class="slider-value" id="rate-value">1.0x</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="control-row">
+                        <div class="control-item">
+                            <label for="pitch-control">
+                                <i class="fas fa-sliders-h"></i> Pitch
+                            </label>
+                            <div class="slider-container">
+                                <input type="range" id="pitch-control" min="0.5" max="2" step="0.1" value="1">
+                                <div class="slider-value" id="pitch-value">1.0</div>
+                            </div>
+                        </div>
+                        
+                        <div class="control-item">
+                            <label for="volume-control">
+                                <i class="fas fa-volume-up"></i> Volume
+                            </label>
+                            <div class="slider-container">
+                                <input type="range" id="volume-control" min="0" max="1" step="0.1" value="1">
+                                <div class="slider-value" id="volume-value">100%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="btn-primary" id="speak-btn">
+                        <i class="fas fa-play"></i>
+                        <span>Convert to Speech</span>
+                    </button>
+                    
+                    <button class="btn-secondary" id="pause-btn" disabled>
+                        <i class="fas fa-pause"></i>
+                        <span>Pause</span>
+                    </button>
+                    
+                    <button class="btn-secondary" id="stop-btn" disabled>
+                        <i class="fas fa-stop"></i>
+                        <span>Stop</span>
+                    </button>
+                </div>
+            </div>
+        </div>
         
-        <footer>
-            <p>Built with JavaScript Web Speech API</p>
-        </footer>
+        <!-- Right Panel -->
+        <div class="card right-panel">
+            <div class="section-header">
+                <h3><i class="fas fa-info-circle"></i> About VoiceFlow</h3>
+            </div>
+            
+            <div class="about-content">
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #8b5cf6, #a78bfa);">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h4>Multilingual Support</h4>
+                    <p>Convert text to speech in multiple languages including Nepali, English, Spanish, and more.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #3b82f6, #60a5fa);">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h4>Customizable Voices</h4>
+                    <p>Adjust speed, pitch, and volume to create the perfect voice for your needs.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #10b981, #34d399);">
+                        <i class="fas fa-universal-access"></i>
+                    </div>
+                    <h4>Accessibility Focused</h4>
+                    <p>Designed with accessibility in mind to help everyone access digital content.</p>
+                </div>
+            </div>
+            
+            <div class="preview-section">
+                <div class="section-header">
+                    <h3><i class="fas fa-headphones"></i> Preview</h3>
+                </div>
+                <div class="preview-card">
+                    <div class="waveform" id="waveform">
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                    </div>
+                    <div class="preview-text" id="preview-text">
+                        Ready to convert your text to natural sounding speech.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <div class="status-indicator">
+                    <div class="status-dot active"></div>
+                    <span id="status-text">Ready to speak</span>
+                </div>
+                
+                <div class="footer-links">
+                    <p>&copy; <span id="current-year"></span> Manoj Joshi. All Rights Reserved.</p>
+                    <p>Developed with <i class="fas fa-heart" style="color: #ef4444;"></i> in Nepal</p>
+                    <div class="social-links">
+                        <a href="https://github.com/manojjoshi099" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <span class="separator">•</span>
+                        <a href="#" class="social-link">
+                            <i class="fas fa-globe"></i> Portfolio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
